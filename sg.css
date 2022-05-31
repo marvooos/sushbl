@@ -8,12 +8,49 @@
    
 
 }
+@font-face   {
+    font-family: 'DINPro';
+    src: url(font/DINPro-Light.woff);
+    font-weight: 400;
+    font-style: normal;
+    }
+
+@font-face   {
+font-family: 'DINPro1';
+src: url(font/DINPro-Bold.woff);
+font-weight: normal;
+font-style: normal;
+}
+@font-face   {
+    font-family: 'DINPro2';
+    src: url(font/DINPro-Black.woff);
+    font-weight: normal;
+    font-style: normal;
+    }
+    @font-face   {
+        font-family: 'DINPro3';
+        src: url(font/DINPro-Medium.woff);
+        font-weight: normal;
+        font-style: normal;
+        }
+        @font-face   {
+            font-family: 'DINPro4';
+            src: url(font/DINPro.woff);
+            font-weight: normal;
+            font-style: normal;
+            }
+    
+
+
+
+
+
 .spisok-img{
     padding-left: 125px;
     width: 137px;
     height: 141.67px;
     padding-top: 26px;
-    margin-bottom: 61px;
+    margin-bottom: 30px;
 
 }
 .spisok-eda{
@@ -27,10 +64,11 @@ padding-left: 129px;
 margin-bottom: 30px;
 }
 .spisok-edaNAP{
-    font-family: 'Poppins', sans-serif;
+
     display: flex;
     font-weight: 400;
 font-size: 24px;
+font-family: 'DINPro3';
 align-items: center;
 padding-left: 20px;
 padding-left: 136px;
@@ -94,6 +132,8 @@ margin-bottom: 30px;
 text-decoration: none;
 color: #000000;
 padding-left: 20px;
+font-weight: 400;
+font-family: 'DINPro3';
 transition: color 0.30s ease;
 }
 .spisok-title:hover{
@@ -110,7 +150,7 @@ transition: color 0.30s ease;
     height: 96px;
     border-style: solid;
     border-width: 0px 1px 0px 0px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'DINPro3';
     display: grid;
     width: 233px;
     border-color: #A4ACAD;
@@ -126,7 +166,8 @@ transition: color 0.30s ease;
     text-align: center;
     padding-left: 42px;
     font-weight: 500;
-    font-size: 15px;
+    font-family: 'DINPro3';
+    font-size: 18px;
     width: 138px;
     align-items: center;
     color: #FF9846;
@@ -139,8 +180,10 @@ transition: color 0.30s ease;
 .intro-teltitle{
     padding-top: 6px;
     height: 0;
+    margin-bottom: 9px;
+    font-family: 'DINPro3';
     font-weight: 500;
-    font-size: 16px;
+    font-size: 18px;
     padding-left: 55px;
 }
 .intro-head-img{
@@ -151,7 +194,8 @@ transition: color 0.30s ease;
 .intro-head-img-p{
     padding-left: 5px;
     font-weight: 500;
-font-size: 14px;
+    
+    font-size: 14px;
 line-height: 17px;
 color: #A4ACAD;
 }
@@ -199,20 +243,36 @@ margin-left: auto;
 
 
 }
+.logo-border{
 
+
+
+margin-bottom: 31px;
+    margin-left: 105px;
+    width: 180px;
+    border-style: solid;
+    border-width: 1px 0px 0px 0px;
+    border-color:#dadbdb;
+ 
+
+}
 .intro-head-info-texttow{
     margin-right: 69px;
+    font-size: 18px;
+    font-family: 'DINPro3';
     transition: color 0.3s ease;
     text-decoration: none;
-    font-family: 'Poppins', sans-serif;
+
     color: #000;
 }
 .intro-head-info-text{
     margin-right: 10px;
+    font-size: 18px;
+    font-family: 'DINPro3';
     transition: color 0.3s ease;
     text-decoration: none;
     color: #000;
-    font-family: 'Poppins', sans-serif; 
+
 }
 .intro-head-info-text:hover{
     color: #FF9846;
@@ -243,10 +303,19 @@ color: #FF9846;
     color: #A4ACAD;
     letter-spacing: 10px;
     text-decoration: none;
-    transition: color 0.3s ease;
+    font-size: 13px;
+transition: 3s;
+    transition: all 0.3s ease;
+   
+
 }
 .tohka:hover{
- color: #FF9846;
+font-size: 17px;
+    color: #FF9846;
+
+   }
+.tohka::after {
+
 }
 .intro-menu-tichka{
     margin-top: 11px;
@@ -261,34 +330,42 @@ color: #FF9846;
     margin-top: 30px;
 }
 .intro-textx{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'DINPro3';
     margin-right: 30px;
     font-weight: 500;
 font-size: 24px;
-    text-decoration: none;
-    color: #000000;
-    transition: color 0.3s ease;
-
+transition: color 0.3 ease;
+position: relative;
+color: #000000; /*задаём цвет ссылки*/
+cursor: pointer;
+line-height: 1; /*задаём высоту строки*/
+text-decoration: none; /*убираем подчёркивание*/
 
 
 }
 .intro-textx::after{
-    text-decoration: dashed;
-    color: #A4ACAD;
-    width: 100%;
-    position: absolute;
-
-    left: 0;
-    content: "";
-    opacity: 0;
-
+    display: block;
+	position: absolute;
+    top: 110%;
+    	left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+	width: 0;/*задаём длинну линии до наведения курсора*/
+	height: 2px; /*задаём ширину линии*/
+	background-color: #A4ACAD; /*задаём цвет линии*/
+	content: "";
+	transition: width 0.3s ease-out; /*задаём время анимации*/
+}
+.intro-textx:hover:after,
+.intro-textx:focus:after {
+	width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
 }
 .intro-textx:hover{
-    text-decoration: dotted;
     color: #A4ACAD;
-
-
+ 
 }
+
+
+
+
 .intro-text{
       margin-bottom: 30px;
 
@@ -310,7 +387,7 @@ margin-right: 41px;
 .block-knopka{
     text-decoration: none;
     border-style: solid;
-    border-width: 2px 0px 0px 0px;
+    border-width: 1px 0px 0px 0px;
     border-color: #A4ACAD;
 }
 .knopka{
